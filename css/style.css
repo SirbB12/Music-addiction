@@ -2,10 +2,17 @@
     margin:0px;
 }
 
-.background{
+/*.background{
     width: 100vw;
     height: 50vh;
     
+}*/
+.my-logo{
+   background-image: url(bg1.jpg);
+   background-repeat: no-repeat;
+   height: 50vh;
+   width: 100vw;
+   background-repeat: no-repeat;
 }
 
 /* Navbar */
@@ -14,7 +21,7 @@
    margin: 0px;
    display: flex;
    overflow: hidden;
-   background-color: black;
+   background-color:black;
    height: 8vh;
  }
  
@@ -70,3 +77,4 @@
  .dropdown:hover .dropdown-content {
    display: block;
  }
+ 
