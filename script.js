@@ -39,18 +39,18 @@ const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
 const BOT_MSGS = [
-  "Hi, how are you?",
-  "Ohh... I can't understand what you trying to say. Sorry!",
-  "I like to play games... But I don't know how to play!",
-  "Sorry if my answers are not relevant. :))",
-  "I feel sleepy! :("
+  "Multumesc!",
+  "Mai sti si alte modele de afara?",
+  "Hmmm, o sa ma gandesc la asta.",
+  "Multumesc inca odata! :)",
+  ":)"
 ];
 
 // Icons made by Freepik from www.flaticon.com
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
 const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-const BOT_NAME = "BOT";
-const PERSON_NAME = "Sajad";
+const BOT_NAME = "Cristian";
+const PERSON_NAME = "Laura";
 
 msgerForm.addEventListener("submit", event => {
   event.preventDefault();
@@ -110,3 +110,8 @@ function formatDate(date) {
 function random(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
+
+
+
+
+

@@ -1,6 +1,9 @@
 *{
   margin: 0px;
 }
+body{
+  overflow-x: hidden;
+}
 /* Top Bar */
 .top-bar{
   display: flex;
@@ -15,7 +18,7 @@
   height: 16vh;
 }
 #instrumente2{
-  margin-left: 10vw;
+  margin-left: 6vw;
   width: 15vw;
   height: 16vh;
 }
@@ -48,6 +51,213 @@ input:focus{
 }
 .button-search{
   background-color:palevioletred;
+  height: 6vh;
+}
+/* Meniu */
+.bg {
+  display: flex;
+  /* The image used */
+  background-image: url("bag.png");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#menuArea{
+  display: flex;
+  margin-right: 4vw; 
+}
+
+input {
+  display: flex;
+}
+
+.open {
+  background-color: darkcyan;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+  top: 8px;
+}
+
+.open:before {
+  content: "";
+  background-color: red;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: -8px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.open:after {
+  content: "";
+  background-color: #12db9f;
+  width: 24px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  position: relative;
+  top: 4px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+
+.menuOpen {
+  width: 24px;
+  height: 20px;
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+  float: right;
+}
+
+.menuOpen:hover .open:before {
+  top: -9px;
+}
+
+.menuOpen:hover .open:after {
+  top: 5px;
+}
+
+.menu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-image: url("uu.jpg");
+}
+
+.menu label {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background-size: 100%;
+  cursor: pointer;
+}
+
+.menu .menuContent {
+  position: relative;
+  top: 50%;
+  font-size: 54px;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-top: -170px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.menu ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-family: Trebuchet MS;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.menu ul li a:hover {
+  color: black;
+}
+
+.menu ul li:hover {
+  background: powderblue;
+}
+
+.menuEffects {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.menuEffects ul {
+  transform: translateY(0%);
+  transition: all 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s;
+}
+
+#menuToggle:checked ~ .menuEffects ul {
+  opacity: 1;
+}
+
+#menuToggle:checked ~ .menuOpen .open {
+  background-color: transparent;
+}
+
+#menuToggle:checked ~ .menuOpen .open:before {
+  content: "";
+  background-color: rgb(243, 237, 237);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menuToggle:checked ~ .menuOpen .open:after {
+  content: "";
+  background-color: white;
+  transform: rotate(-45deg);
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+#menuToggle:not(:checked) ~ .menuEffects ul {
+  transform: translateY(-30%);
+  
+}
+
+/*Text*/
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+.hidden {
+opacity:0;
+}
+.console-container {
+
+font-family:Khula;
+font-size:4em;
+text-align:center;
+height:200px;
+width:600px;
+display:block;
+position:absolute;
+color:white;
+top:400px;
+bottom: 0;
+left:0;
+right:0;
+margin:auto;
+}
+.console-underscore {
+ display:inline-block;
+position:relative;
+top:-0.14em;
+left:10px;
 }
 
 /* Content */
@@ -58,9 +268,8 @@ input:focus{
 }
 
 .video{
-  width: 25vw;
+  width: 20vw;
   height: 100vh;
-  background-color:powderblue;
   text-align: center;
 }
 
@@ -81,7 +290,7 @@ input:focus{
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 16px;
+  padding: 13px;
   color: white;
   margin-top: -22px;
   font-weight: bold;
@@ -198,15 +407,15 @@ input:focus{
 }
 
 .magazin{
-  width: 50vw;
+  width: 55vw;
   height: 100vh;
   
 }
 /*Chat*/
 .chat{
-  width: 25vw;
+  width: 24vw;
   height: 70vh;
-  background-color: darkcyan;
+ 
 }
 
 
@@ -361,4 +570,433 @@ html {
 .msg-text{
 font-size: 15px;
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+/* Magazin */
+.magazin{
+  flex-wrap: wrap;
+  display: flex;
+ 
+  
+}
+.instrument-unu{
+  
+  margin: 20px;
+  height: 50vh;
+  display: flex;
+  background-color: #579ffb;
+}
+.content-instrument-unu{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.content-instrument-doi{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.content-instrument-trei{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.content-instrument-patru{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.content-instrument-cinci{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.content-instrument-sase{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.content-instrument-sapte{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.content-instrument-opt{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.content-instrument-noua{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.content-instrument-zece{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: powderblue;
+  justify-content: center;
+  width: 24vw;
+  height: 50vh;
+}
+.nume{
+  width: 25vw;
+  height: 6vh;
+  background-color: powderblue;
+  text-align: center;
+}
+.text-style-vioara{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.img-unu{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  height: 40vh;
+}
+#vioaraunu{
+  margin-bottom: 4vh;
+  width: 20vw;
+  height: 40vh;
+} 
+.pret-vioara{
+  display: flex;
+  width: 25vw;
+  height: 8vh;
+  background-color:pink;
+  text-align: center;
+}
+
+
+
+
+
+/* Button heart like*/
+.heartbox {
+ margin-left: 5vw;
+  transform: translate(-50%, -50%)
+  
+}
+.heartbox2{
+  margin-left: 5vw;
+  transform: translate(-50%, -50%)
+}
+
+.position{
+  display: flex;
+  justify-content: center;
+width: 10vw;
+
+}
+svg {
+  cursor: pointer;
+  overflow: visible;
+  width: 60px;
+  margin: 20px
+}
+
+svg #heart {
+  transform-origin: center;
+  animation: animateHeartOut .3s linear forwards
+}
+
+svg #main-circ {
+  transform-origin: 29.5px 29.5px
+}
+
+.checkbox {
+  display: none
+}
+
+.checkbox:checked+label svg #heart {
+  transform: scale(0.2);
+  fill: #E2264D;
+  animation: animateHeart .3s linear forwards .25s
+}
+
+.checkbox:checked+label svg #main-circ {
+  transition: all 2s;
+  animation: animateCircle .3s linear forwards;
+  opacity: 1
+}
+
+.checkbox:checked+label svg #heartgroup1 {
+  opacity: 1;
+  transition: .1s all .3s
+}
+
+.checkbox:checked+label svg #heartgroup1 #heart1 {
+  transform: scale(0) translate(0, -30px);
+  transform-origin: 0 0 0;
+  transition: .5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup1 #heart2 {
+  transform: scale(0) translate(10px, -50px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup2 {
+  opacity: 1;
+  transition: .1s all .3s
+}
+
+.checkbox:checked+label svg #heartgroup2 #heart1 {
+  transform: scale(0) translate(30px, -15px);
+  transform-origin: 0 0 0;
+  transition: .5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup2 #heart2 {
+  transform: scale(0) translate(60px, -15px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup3 {
+  opacity: 1;
+  transition: .1s all .3s
+}
+
+.checkbox:checked+label svg #heartgroup3 #heart1 {
+  transform: scale(0) translate(30px, 0px);
+  transform-origin: 0 0 0;
+  transition: .5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup3 #heart2 {
+  transform: scale(0) translate(60px, 10px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup4 {
+  opacity: 1;
+  transition: .1s all .3s
+}
+
+.checkbox:checked+label svg #heartgroup4 #heart1 {
+  transform: scale(0) translate(30px, 15px);
+  transform-origin: 0 0 0;
+  transition: .5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup4 #heart2 {
+  transform: scale(0) translate(40px, 50px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup5 {
+  opacity: 1;
+  transition: .1s all .3s
+}
+
+.checkbox:checked+label svg #heartgroup5 #heart1 {
+  transform: scale(0) translate(-10px, 20px);
+  transform-origin: 0 0 0;
+  transition: .5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup5 #heart2 {
+  transform: scale(0) translate(-60px, 30px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup6 {
+  opacity: 1;
+  transition: .1s all .3s
+}
+
+.checkbox:checked+label svg #heartgroup6 #heart1 {
+  transform: scale(0) translate(-30px, 0px);
+  transform-origin: 0 0 0;
+  transition: .5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup6 #heart2 {
+  transform: scale(0) translate(-60px, -5px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup7 {
+  opacity: 1;
+  transition: .1s all .3s
+}
+
+.checkbox:checked+label svg #heartgroup7 #heart1 {
+  transform: scale(0) translate(-30px, -15px);
+  transform-origin: 0 0 0;
+  transition: .5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup7 #heart2 {
+  transform: scale(0) translate(-55px, -30px);
+  transform-origin: 0 0 0;
+  transition: 1.5s transform .3s
+}
+
+.checkbox:checked+label svg #heartgroup2 {
+  opacity: 1;
+  transition: .1s opacity .3s
+}
+
+.checkbox:checked+label svg #heartgroup3 {
+  opacity: 1;
+  transition: .1s opacity .3s
+}
+
+.checkbox:checked+label svg #heartgroup4 {
+  opacity: 1;
+  transition: .1s opacity .3s
+}
+
+.checkbox:checked+label svg #heartgroup5 {
+  opacity: 1;
+  transition: .1s opacity .3s
+}
+
+.checkbox:checked+label svg #heartgroup6 {
+  opacity: 1;
+  transition: .1s opacity .3s
+}
+
+.checkbox:checked+label svg #heartgroup7 {
+  opacity: 1;
+  transition: .1s opacity .3s
+}
+
+@keyframes animateCircle {
+  40% {
+      transform: scale(10);
+      opacity: 1;
+      fill: #DD4688
+  }
+
+  55% {
+      transform: scale(11);
+      opacity: 1;
+      fill: #D46ABF
+  }
+
+  65% {
+      transform: scale(12);
+      opacity: 1;
+      fill: #CC8EF5
+  }
+
+  75% {
+      transform: scale(13);
+      opacity: 1;
+      fill: transparent;
+      stroke: #CC8EF5;
+      stroke-width: .5
+  }
+
+  85% {
+      transform: scale(17);
+      opacity: 1;
+      fill: transparent;
+      stroke: #CC8EF5;
+      stroke-width: .2
+  }
+
+  95% {
+      transform: scale(18);
+      opacity: 1;
+      fill: transparent;
+      stroke: #CC8EF5;
+      stroke-width: .1
+  }
+
+  100% {
+      transform: scale(19);
+      opacity: 1;
+      fill: transparent;
+      stroke: #CC8EF5;
+      stroke-width: 0
+  }
+}
+
+@keyframes animateHeart {
+  0% {
+      transform: scale(0.2)
+  }
+
+  40% {
+      transform: scale(1.2)
+  }
+
+  100% {
+      transform: scale(1)
+  }
+}
+
+@keyframes animateHeartOut {
+  0% {
+      transform: scale(1.4)
+  }
+
+  100% {
+      transform: scale(1)
+  }
+}
+
+
+
+/* Bani vioara */
+
+.bani-vioara{
+  margin-top: 2vh;
+  
+}
+
+.cos-cumparaturi{
+display: flex;
+justify-content: center;
+border-radius: 50%;
+width: 3vw;
+height: 5vh;
+margin-top: 2vh;
+margin-left: 2vw;
+background-color:pink;
+border-color: pink;
+
+}
+#shopping-cart{
+  width: 2vw;
+  height: 4vh;
 }
