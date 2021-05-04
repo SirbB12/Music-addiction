@@ -674,7 +674,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   background-color: powderblue;
   text-align: center;
 }
-.text-style-vioara{
+#marca{
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .img-unu{
@@ -711,7 +711,38 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
   margin-left: 5vw;
   transform: translate(-50%, -50%)
 }
-
+.heartbox3{
+  margin-left: 5vw;
+  transform: translate(-50%, -50%)
+}
+.heartbox4{
+  margin-left: 5vw;
+  transform: translate(-50%, -50%)
+}
+.heartbox5{
+  margin-left: 5vw;
+  transform: translate(-50%, -50%)
+}
+.heartbox6{
+  margin-left: 5vw;
+  transform: translate(-50%, -50%)
+}
+.heartbox7{
+  margin-left: 5vw;
+  transform: translate(-50%, -50%)
+}
+.heartbox8{
+  margin-left: 5vw;
+  transform: translate(-50%, -50%)
+}
+.heartbox9{
+  margin-left: 5vw;
+  transform: translate(-50%, -50%)
+}
+.heartbox10{
+  margin-left: 5vw;
+  transform: translate(-50%, -50%)
+}
 .position{
   display: flex;
   justify-content: center;
