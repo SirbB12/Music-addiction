@@ -3,6 +3,7 @@
 }
 body{
   overflow-x: hidden;
+ 
 }
 /* Top Bar */
 .top-bar{
@@ -263,14 +264,18 @@ left:10px;
 /* Content */
 .content{
   display: flex;
+  flex-wrap: wrap;
   width: 100vw;
 
 }
 
 .video{
   width: 20vw;
-  height: 100vh;
+  height: 60vh;
   text-align: center;
+  position: fixed;
+  margin-top: 7vh;
+  
 }
 
 .slideshow-container {
@@ -341,8 +346,8 @@ left:10px;
 /* Number text (1/3 etc) */
 
 .numbertext {
-  color: rgb(67, 67, 136);
-  font-size: 12px;
+  color: black;
+  font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   top: 0;
@@ -407,14 +412,17 @@ left:10px;
 }
 
 .magazin{
+  
   width: 55vw;
   height: 100vh;
-  
+  margin-left: 20vw;
 }
 /*Chat*/
 .chat{
   width: 24vw;
   height: 70vh;
+  position: fixed;
+  margin-left: 74vw;
  
 }
 
@@ -550,6 +558,7 @@ html {
 .msger-input {
   flex: 1;
   background: #ddd;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .msger-send-btn {
   margin-left: 10px;
@@ -569,9 +578,8 @@ html {
 }
 .msg-text{
 font-size: 15px;
-font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
 
 
 /* Magazin */
@@ -746,7 +754,7 @@ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans
 .position{
   display: flex;
   justify-content: center;
-width: 10vw;
+width: 8vw;
 
 }
 svg {
@@ -1030,4 +1038,76 @@ border-color: pink;
 #shopping-cart{
   width: 2vw;
   height: 4vh;
+}
+
+/* Bottom bar*/
+.bottom-bar{
+  display: flex;
+  align-content: center;
+  width: 100vw;
+  height: 15vh;
+ 
+}
+
+/*Slide numbers*/
+.mySlides { 
+  display:none;
+  
+}
+.slide-numbers{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-content: center;
+  margin-left: 20vw;
+  margin-top: 6vh;
+  width: 30vw;
+}
+/*
+.w3-content{
+  display: flex;
+  flex-wrap: wrap;
+}
+.w3-button{
+ align-content: space-around;
+}*/
+
+.dottedSection {
+  border-bottom: 1px dotted #b1b1b1;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-content: center
+}
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+.page-nav{
+  display: flex;
+  
+  text-align: center;
+  list-style-type: none;
+  align-content: space-around;
+}
+.space{
+  margin-left: 15px;
+ 
+}
+#puncteee{
+  margin-left: 15px;
+}
+.space:hover{
+  background-color:#579ffb ;
+  border-radius: 15%;
+  width: 20px;
+  
+}
+.space-doi{
+  margin-left: 15px;
+}
+.space-doi:hover{
+  background-color:#579ffb ;
+  border-radius: 15%;
+  width: 50px;
+  
 }
